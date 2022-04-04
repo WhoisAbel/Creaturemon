@@ -7,7 +7,7 @@
   android:layout_width="match_parent"
   android:layout_height="@dimen/list_item_creature_height">
 
-  <ImageView
+  <androidx.appcompat.widget.AppCompatImageView
     android:id="@+id/avatarListItem"
     android:layout_width="@dimen/list_item_creature_height"
     android:layout_height="@dimen/list_item_creature_height"
@@ -18,7 +18,7 @@
     app:layout_constraintTop_toTopOf="parent"
     tools:srcCompat="@drawable/creature_cat_derp" />
 
-  <TextView
+  <androidx.appcompat.widget.AppCompatTextView
     android:id="@+id/name"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
@@ -31,7 +31,7 @@
     app:layout_constraintTop_toTopOf="parent"
     tools:text="Creature Name" />
 
-  <TextView
+  <androidx.appcompat.widget.AppCompatTextView
     android:id="@+id/hitPoints"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"

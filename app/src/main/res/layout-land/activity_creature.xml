@@ -7,7 +7,7 @@
   android:layout_height="match_parent"
   tools:context=".view.creature.CreatureActivity">
 
-  <TextView
+  <androidx.appcompat.widget.AppCompatTextView
     android:id="@+id/tapLabel"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
@@ -19,7 +19,7 @@
     app:layout_constraintTop_toTopOf="@+id/avatarImageView"
     tools:text="@string/tap_to_set_avatar" />
 
-  <ImageView
+  <androidx.appcompat.widget.AppCompatImageView
     android:id="@+id/avatarImageView"
     android:layout_width="160dp"
     android:layout_height="160dp"
@@ -36,7 +36,7 @@
     android:orientation="vertical"
     app:layout_constraintGuide_percent="0.5" />
 
-  <TextView
+  <androidx.appcompat.widget.AppCompatTextView
     android:id="@+id/hitPointsLabel"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
@@ -49,7 +49,7 @@
     app:layout_constraintTop_toTopOf="parent"
     tools:text="@string/hit_points" />
 
-  <TextView
+  <androidx.appcompat.widget.AppCompatTextView
     android:id="@+id/hitPoints"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
@@ -60,7 +60,7 @@
     app:layout_constraintTop_toBottomOf="@+id/hitPointsLabel"
     tools:text="999" />
 
-  <Button
+  <androidx.appcompat.widget.AppCompatButton
     android:id="@+id/saveButton"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
@@ -70,7 +70,7 @@
     app:layout_constraintStart_toEndOf="@+id/nameEditText"
     app:layout_constraintTop_toBottomOf="@+id/hitPoints" />
 
-  <TextView
+  <androidx.appcompat.widget.AppCompatTextView
     android:id="@+id/nameLabel"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
@@ -80,7 +80,7 @@
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toBottomOf="@+id/avatarImageView" />
 
-  <EditText
+  <androidx.appcompat.widget.AppCompatEditText
     android:id="@+id/nameEditText"
     android:layout_width="0dp"
     android:layout_height="wrap_content"
@@ -91,7 +91,7 @@
     app:layout_constraintEnd_toStartOf="@+id/saveButton"
     app:layout_constraintStart_toEndOf="@+id/nameLabel" />
 
-  <TextView
+  <androidx.appcompat.widget.AppCompatTextView
     android:id="@+id/intelligenceLabel"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
@@ -101,7 +101,7 @@
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toBottomOf="@+id/nameLabel" />
 
-  <Spinner
+  <androidx.appcompat.widget.AppCompatSpinner
     android:id="@+id/intelligence"
     android:layout_width="0dp"
     android:layout_height="wrap_content"
@@ -110,7 +110,7 @@
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toEndOf="@+id/intelligenceLabel" />
 
-  <TextView
+  <androidx.appcompat.widget.AppCompatTextView
     android:id="@+id/strengthLabel"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
@@ -120,7 +120,7 @@
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toBottomOf="@+id/intelligenceLabel" />
 
-  <Spinner
+  <androidx.appcompat.widget.AppCompatSpinner
     android:id="@+id/strength"
     android:layout_width="0dp"
     android:layout_height="wrap_content"
@@ -129,7 +129,7 @@
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toEndOf="@+id/intelligenceLabel" />
 
-  <TextView
+  <androidx.appcompat.widget.AppCompatTextView
     android:id="@+id/enduranceLabel"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
@@ -139,7 +139,7 @@
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toBottomOf="@+id/strengthLabel" />
 
-  <Spinner
+  <androidx.appcompat.widget.AppCompatSpinner
     android:id="@+id/endurance"
     android:layout_width="0dp"
     android:layout_height="wrap_content"
