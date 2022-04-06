@@ -15,7 +15,7 @@ class CreatureViewModel(creatureRepository: CreatureRepository) : ViewModel() {
 
     lateinit var creature: Creature
 
-    private val creatureLiveData = MutableLiveData<Creature>()
+    val creatureLiveData = MutableLiveData<Creature>()
     fun creatureLiveData(): LiveData<Creature> = creatureLiveData
 
     fun updateCreature() {
