@@ -18,7 +18,7 @@ class CreatureViewModel(creatureRepository: CreatureRepository) : ViewModel() {
     val creatureLiveData = MutableLiveData<Creature>()
     fun creatureLiveData(): LiveData<Creature> = creatureLiveData
 
-    fun updateCreature() {
+    private fun updateCreature() {
         val attributes = CreatureAttributes(
             intelligence = intelligence,
             strength = strength,
