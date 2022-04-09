@@ -37,6 +37,7 @@ class CreatureActivity : AppCompatActivity(), AvatarAdapter.AvatarListener {
         configureSpinnerListeners()
         configureEditText()
         configureClickListeners()
+        configureLiveDataObservers()
     }
 
     private fun configureUI() {
