@@ -127,7 +127,8 @@ class CreatureActivity : AppCompatActivity(), AvatarAdapter.AvatarListener {
         }
 
         saveButton.setOnClickListener {
-            // TODO: handle save button clicked
+            creatureViewModel.saveCreature()
+            finish()
         }
     }
 
