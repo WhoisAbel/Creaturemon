@@ -4,8 +4,13 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.creaturemon.model.*
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 
-class CreatureViewModel(creatureRepository: CreatureRepository) : ViewModel() {
+class CreatureViewModel(
+    private val creatureRepository: CreatureRepository
+) : ViewModel() {
 
     var name = ""
     var intelligence: Int = 0
@@ -50,6 +55,18 @@ class CreatureViewModel(creatureRepository: CreatureRepository) : ViewModel() {
     fun drawableSelected(drawable: Int) {
         this.drawable = drawable
         updateCreature()
+    }
+
+    fun saveCreature() {
+        CoroutineScope(Dispatchers.Main).launch {
+            if (canSaveCreature()) {
+                creatureRepository.insert(creature)
+            }
+        }
+    }
+
+    private fun canSaveCreature(): Boolean {
+        return intelligence != 0 && strength != 0 && endurance != 0 && name.isNotEmpty() && drawable != 0
     }
 
 }
