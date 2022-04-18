@@ -1,4 +1,4 @@
-package com.example.creaturemon.view.viewmodel
+package com.example.creaturemon.view.creature
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
