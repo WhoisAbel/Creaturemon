@@ -1,4 +1,4 @@
-package com.example.creaturemon.view.viewmodel
+package com.example.creaturemon.view.creature
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider

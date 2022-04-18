@@ -1,11 +1,13 @@
 package com.example.creaturemon.view.allcreatures
 
+import android.annotation.SuppressLint
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.creaturemon.R
 import com.example.creaturemon.app.inflate
 import com.example.creaturemon.model.Creature
+import kotlinx.android.synthetic.main.list_item_creature.view.*
 
 
 class CreatureAdapter(private val creatures: MutableList<Creature>)
@@ -31,9 +33,13 @@ class CreatureAdapter(private val creatures: MutableList<Creature>)
 
         private lateinit var creature: Creature
 
+        @SuppressLint("UseCompatLoadingForDrawables")
         fun bind(creature: Creature) {
             this.creature = creature
-            // TODO: populate views
+            itemView.avatarListItem.setImageDrawable(itemView.context.getDrawable(creature.drawable))
+            itemView.name.text = creature.name
+            itemView.hitPoints.text = creature.hitPoints.toString()
+
         }
     }
 }

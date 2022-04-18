@@ -14,8 +14,6 @@ import com.example.creaturemon.model.*
 import com.example.creaturemon.model.db.CreatureDatabase
 import com.example.creaturemon.view.avatars.AvatarAdapter
 import com.example.creaturemon.view.avatars.AvatarBottomDialogFragment
-import com.example.creaturemon.view.viewmodel.CreatureViewModel
-import com.example.creaturemon.view.viewmodel.CreatureViewModelFactory
 import kotlinx.android.synthetic.main.activity_creature.*
 
 class CreatureActivity : AppCompatActivity(), AvatarAdapter.AvatarListener {
