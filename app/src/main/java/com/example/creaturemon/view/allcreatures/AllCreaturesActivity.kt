@@ -53,6 +53,7 @@ class AllCreaturesActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
             R.id.action_clear_all -> {
+                allCreaturesViewModel.clearAllCreatures()
                 true
             }
             else -> super.onOptionsItemSelected(item)
