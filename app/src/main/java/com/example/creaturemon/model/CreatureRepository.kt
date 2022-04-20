@@ -7,7 +7,9 @@ class CreatureRepository(
 ) {
     suspend fun insert(creature: Creature) = db.creatureDao().insert(creature)
 
-    suspend fun delete(vararg creature: Creature) = db.creatureDao().clearCreature(*creature)
+    suspend fun delete(vararg creature:Creature) = db.creatureDao().clearCreature(*creature)
 
     fun getAllCreature() = db.creatureDao().getAllCreature()
+
+
 }
