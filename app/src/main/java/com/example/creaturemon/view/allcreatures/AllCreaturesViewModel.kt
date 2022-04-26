@@ -1,9 +1,6 @@
 package com.example.creaturemon.view.allcreatures
 
-import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
-import androidx.lifecycle.map
-import com.example.creaturemon.model.Creature
 import com.example.creaturemon.model.CreatureRepository
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
