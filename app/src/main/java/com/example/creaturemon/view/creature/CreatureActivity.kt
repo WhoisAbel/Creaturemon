@@ -8,28 +8,24 @@ import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
 import com.example.creaturemon.R
+import com.example.creaturemon.app.di.kodeinViewModel
 import com.example.creaturemon.model.*
-import com.example.creaturemon.model.db.CreatureDatabase
 import com.example.creaturemon.view.avatars.AvatarAdapter
 import com.example.creaturemon.view.avatars.AvatarBottomDialogFragment
 import kotlinx.android.synthetic.main.activity_creature.*
+import org.kodein.di.KodeinAware
+import org.kodein.di.android.closestKodein
 
-class CreatureActivity : AppCompatActivity(), AvatarAdapter.AvatarListener {
+class CreatureActivity : AppCompatActivity(), KodeinAware, AvatarAdapter.AvatarListener {
 
-    private lateinit var factory: CreatureViewModelFactory
-    private lateinit var creatureViewModel: CreatureViewModel
+    override val kodein by closestKodein()
+    private  val creatureViewModel: CreatureViewModel by kodeinViewModel()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_creature)
 
-
-        val db = CreatureDatabase(this.applicationContext)
-        val repository = CreatureRepository(db)
-        factory = CreatureViewModelFactory(repository)
-        creatureViewModel = ViewModelProvider(this, factory)[CreatureViewModel::class.java]
         configureUI()
         configureSpinnerAdapters()
         configureSpinnerListeners()
@@ -109,7 +105,7 @@ class CreatureActivity : AppCompatActivity(), AvatarAdapter.AvatarListener {
     }
 
     private fun configureLiveDataObservers() {
-        creatureViewModel.creatureLiveData.observe(this, Observer { creature ->
+        creatureViewModel.creatureLiveData().observe(this, Observer { creature ->
             creature?.let {
                 hitPoints.text = creature.hitPoints.toString()
                 avatarImageView.setImageResource(creature.drawable)

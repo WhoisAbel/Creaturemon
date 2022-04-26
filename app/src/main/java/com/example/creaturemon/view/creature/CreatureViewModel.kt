@@ -20,7 +20,7 @@ class CreatureViewModel(
 
     lateinit var creature: Creature
 
-    val creatureLiveData = MutableLiveData<Creature>()
+    private val creatureLiveData = MutableLiveData<Creature>()
     fun creatureLiveData(): LiveData<Creature> = creatureLiveData
 
     private fun updateCreature() {
