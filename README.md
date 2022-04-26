@@ -8,6 +8,7 @@ Technologies:
 - Room
 - ViewModel
 - LiveData
+- Kodein
 
 
 ![image](https://user-images.githubusercontent.com/92686655/164163016-454195bc-41cb-48c8-924b-a4d458e1a6a3.png)
