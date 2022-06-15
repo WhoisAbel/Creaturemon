@@ -10,6 +10,6 @@ Technologies:
 - LiveData
 - Kodein
 - Coroutine
-- 
+
  ![creature](https://user-images.githubusercontent.com/92686655/173820524-30f397c8-c7ba-417b-b9f5-541a09ddaf93.png)
 
