@@ -9,8 +9,7 @@ Technologies:
 - ViewModel
 - LiveData
 - Kodein
+- Coroutine
+- 
+ ![creature](https://user-images.githubusercontent.com/92686655/173820524-30f397c8-c7ba-417b-b9f5-541a09ddaf93.png)
 
-
-![image](https://user-images.githubusercontent.com/92686655/164163016-454195bc-41cb-48c8-924b-a4d458e1a6a3.png)
-
-![image](https://user-images.githubusercontent.com/92686655/164161348-a246932d-9d03-4f05-9d5d-304796ffd921.png)
